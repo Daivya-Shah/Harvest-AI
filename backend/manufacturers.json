@@ -1,0 +1,1570 @@
+{
+  "manufacturers": [
+    {
+      "name": "Delly Factory",
+      "location": "N/A",
+      "description": "Delly Factory, powered by Annalife, specializes in creating nutritious and indulgent snacks. Focused on natural ingredients, Delly products are free from added sugars, high in fiber, and cater to health-conscious consumers. With a strong commitment to vegan, gluten-free, and protein-packed options, Delly provides delicious and functional snacks for energy, recovery, and mindful eating.",
+      "categories": [
+        {
+          "name": "Nutrition Bars",
+          "subcategories": [
+            {
+              "name": "Nut-Based Bars",
+              "subcategories": [
+                {
+                  "name": "Hazelnut Bar",
+                  "description": "A rich, nutty delight coated in dark chocolate."
+                },
+                {
+                  "name": "Peanut & Sour Cherry Bar",
+                  "description": "A mix of tangy cherry and crunchy peanuts covered in smooth chocolate."
+                },
+                {
+                  "name": "Almond & Orange Bar",
+                  "description": "A refreshing citrus-chocolate combination for a zesty, guilt-free snack."
+                }
+              ]
+            },
+            {
+              "name": "Fruit-Infused Bars",
+              "subcategories": [
+                {
+                  "name": "Banana & Almond Bar",
+                  "description": "A tropical blend of dried bananas and almonds in sugar-free dark chocolate."
+                },
+                {
+                  "name": "Strawberry & Almond Bar",
+                  "description": "A berry-rich snack with a satisfying crunch."
+                },
+                {
+                  "name": "Orange & Almond Bar",
+                  "description": "A tangy citrus infusion with chocolate for a unique flavor balance."
+                }
+              ]
+            },
+            {
+              "name": "Protein & Energy Bars",
+              "subcategories": [
+                {
+                  "name": "Peanut & Coffee Protein Bar",
+                  "description": "Infused with real coffee grains, offering 6% fiber and 20% protein for sustained energy."
+                },
+                {
+                  "name": "Pea Protein Chocolate Bar",
+                  "description": "A plant-based protein option for post-workout recovery."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chocolate",
+          "subcategories": [
+            {
+              "name": "Chocolate-Coated Fruit Bites",
+              "subcategories": [
+                {
+                  "name": "Dark Chocolate-Coated Bananas",
+                  "description": "Bite-sized banana pieces covered in premium dark chocolate for a naturally sweet treat."
+                },
+                {
+                  "name": "Sugar-Free Chocolate Strawberries",
+                  "description": "Dried strawberries coated in sugar-free chocolate for a rich yet healthy indulgence."
+                },
+                {
+                  "name": "Dried Orange & Chocolate Clusters",
+                  "description": "A mix of dried orange pieces and chocolate for a citrus-infused treat."
+                }
+              ]
+            },
+            {
+              "name": "Chocolate-Coated Nut Clusters",
+              "subcategories": [
+                {
+                  "name": "Hazelnut & Chocolate Clusters",
+                  "description": "Crunchy hazelnut clusters dipped in rich dark chocolate."
+                },
+                {
+                  "name": "Almond & Dark Chocolate Bites",
+                  "description": "Almonds coated in velvety dark chocolate for a high-protein snack."
+                },
+                {
+                  "name": "Peanut & Cocoa Crunch",
+                  "description": "A blend of peanuts and cocoa for a nutty, chocolatey crunch."
+                }
+              ]
+            },
+            {
+              "name": "Chocolate Energy Bites",
+              "subcategories": [
+                {
+                  "name": "Date & Cocoa Energy Bites",
+                  "description": "A mix of dates, cocoa, and superfoods, providing natural, long-lasting energy."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vitalidade",
+      "location": "N/A",
+      "description": "Vitalidade is a pioneer in superfood-based nutrition, delivering a wide range of functional food products inspired by Harvard's list of Superfoods. Focused on health, well-being, and sustainability, Vitalidade combines Andean-origin superfoods with cutting-edge food technology to provide macro and micronutrient-rich meals, snacks, and beverages. Their offerings include cereals, shakes, juices, bars, and instant meals, catering to the growing demand for nutritious, convenient, and delicious food solutions.",
+      "categories": [
+        {
+          "name": "Superfood-Based Products",
+          "subcategories": [
+            {
+              "name": "Superfood Snacks & Cereal Bars",
+              "subcategories": [
+                {
+                  "name": "Superfood Snacks",
+                  "description": "Convenient, grab-and-go healthy snacks rich in fiber, protein, and antioxidants."
+                },
+                {
+                  "name": "Actbar Superfood Cereal Bars",
+                  "description": "Energy-packed bars made with whole grains and superfood ingredients for sustained nutrition."
+                },
+                {
+                  "name": "Superfood Plus Bars",
+                  "description": "High in essential vitamins, minerals, and omegas, supporting overall well-being."
+                }
+              ]
+            },
+            {
+              "name": "Superfood Juices & Shakes",
+              "subcategories": [
+                {
+                  "name": "Vegetable and Cereal Whey Protein Shake",
+                  "description": "A plant-based protein shake enriched with superfoods and high biological value proteins."
+                },
+                {
+                  "name": "Superfood Juices",
+                  "description": "Natural fruit and vegetable-based drinks infused with antioxidants, fiber, and omegas, perfect for daily health maintenance."
+                }
+              ]
+            },
+            {
+              "name": "Superfood-Based Instant Foods & Pasta",
+              "subcategories": [
+                {
+                  "name": "Breakfast Cereals",
+                  "description": "A blend of superfood grains, nuts, and seeds, offering a balanced start to the day."
+                },
+                {
+                  "name": "Superfood Pasta",
+                  "description": "High-fiber, whole-grain pasta enriched with essential vitamins and minerals."
+                },
+                {
+                  "name": "Instant Meals",
+                  "description": "Quick and easy-to-prepare nutritious food solutions, combining superfoods, proteins, and healthy fats for a complete meal."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Healthy Baked Goods",
+          "subcategories": [
+            {
+              "name": "Superfood Cookies",
+              "subcategories": [
+                {
+                  "name": "High-Fiber Cookies",
+                  "description": "Guilt-free, nutrient-packed cookies made with high-fiber grains, nuts, and natural sweeteners."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bind Chocolate",
+      "location": "Turkey",
+      "description": "Bind Chocolate is a renowned manufacturer of high-quality, natural chocolates since 1971. Combining European craftsmanship from Germany, Switzerland, and Belgium with state-of-the-art facilities, Bind ensures premium chocolate production. The company is dedicated to providing handcrafted and industrial chocolate products, emphasizing real cocoa butter with no alternative fats. Bind Chocolate caters to B2B, gourmet, and retail sectors globally with a wide range of chocolate products.",
+      "categories": [
+        {
+          "name": "Biscuits & Baked Goods",
+          "subcategories": [
+            {
+              "name": "Chocolate-Coated Biscuits",
+              "subcategories": [
+                {
+                  "name": "Milk Chocolate Biscuits",
+                  "description": "Crunchy biscuits coated in smooth milk chocolate for a delightful treat."
+                },
+                {
+                  "name": "Dark Chocolate Biscuits",
+                  "description": "Rich dark chocolate-coated biscuits with a perfect balance of sweetness and crunch."
+                }
+              ]
+            },
+            {
+              "name": "Filled Biscuits",
+              "subcategories": [
+                {
+                  "name": "Hazelnut Cream Biscuits",
+                  "description": "Biscuits filled with smooth hazelnut cream and coated in chocolate."
+                },
+                {
+                  "name": "Caramel-Filled Biscuits",
+                  "description": "Crispy biscuits with a gooey caramel filling, wrapped in milk chocolate."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chocolates",
+          "subcategories": [
+            {
+              "name": "Truffles",
+              "subcategories": [
+                {
+                  "name": "Classic Chocolate Truffles",
+                  "description": "Rich chocolate truffles made with high-quality cocoa butter and filled with smooth ganache."
+                },
+                {
+                  "name": "Hazelnut Truffles",
+                  "description": "Decadent truffles blended with hazelnut praline for a nutty, creamy experience."
+                },
+                {
+                  "name": "White Chocolate Truffles",
+                  "description": "Velvety white chocolate truffles infused with natural flavors."
+                }
+              ]
+            },
+            {
+              "name": "Luxury Gift Boxes",
+              "subcategories": [
+                {
+                  "name": "Book of Love Collection",
+                  "description": "Handmade, gilded heart chocolates symbolizing romance and indulgence."
+                },
+                {
+                  "name": "Golden Collection",
+                  "description": "A luxurious selection of assorted chocolates, presented in elegant golden packaging."
+                },
+                {
+                  "name": "Artisan Truffles",
+                  "description": "A curated selection of truffles crafted by master chocolatiers, offering a variety of flavors and textures."
+                }
+              ]
+            },
+            {
+              "name": "Assorted Pralines",
+              "subcategories": [
+                {
+                  "name": "Caramel Pralines",
+                  "description": "Milk and dark chocolate pralines filled with smooth caramel."
+                },
+                {
+                  "name": "Gianduja Pralines",
+                  "description": "Italian-style pralines made with a blend of chocolate and finely ground hazelnuts."
+                },
+                {
+                  "name": "Nougat Pralines",
+                  "description": "Soft nougat-filled pralines coated in milk or dark chocolate."
+                }
+              ]
+            },
+            {
+              "name": "Holiday & Seasonal Chocolates",
+              "subcategories": [
+                {
+                  "name": "Christmas Selection",
+                  "description": "Festive chocolate assortments featuring seasonal flavors and holiday-themed packaging."
+                },
+                {
+                  "name": "Valentine’s Day Collection",
+                  "description": "Heart-shaped chocolates and luxury gift boxes designed for romantic occasions."
+                },
+                {
+                  "name": "Easter Chocolate Eggs",
+                  "description": "Handcrafted Easter eggs made with premium chocolate and filled with delicious surprises."
+                }
+              ]
+            },
+            {
+              "name": "Chocolate Bars",
+              "subcategories": [
+                {
+                  "name": "Milk Chocolate Bar",
+                  "description": "Smooth and creamy milk chocolate bar made with high cocoa butter content."
+                },
+                {
+                  "name": "Dark Chocolate Bar",
+                  "description": "Rich dark chocolate bar with an intense cocoa flavor and a hint of bitterness."
+                },
+                {
+                  "name": "Pistachio Milk Chocolate Bar",
+                  "description": "Milk chocolate infused with crunchy pistachio pieces for a nutty delight."
+                },
+                {
+                  "name": "Chili Dark Chocolate Bar",
+                  "description": "A unique fusion of dark chocolate and spicy chili for an adventurous taste experience."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sweets & Spreads",
+          "subcategories": [
+            {
+              "name": "Chocolate Spreads",
+              "subcategories": [
+                {
+                  "name": "Milk Chocolate Hazelnut Spread",
+                  "description": "Creamy milk chocolate spread blended with rich hazelnuts for a smooth, indulgent taste."
+                },
+                {
+                  "name": "Dark Chocolate Hazelnut Spread",
+                  "description": "Intense dark chocolate spread with finely ground hazelnuts, perfect for spreading or dipping."
+                }
+              ]
+            },
+            {
+              "name": "Turkish Delights",
+              "subcategories": [
+                {
+                  "name": "Chocolate-Covered Pistachio Turkish Delight",
+                  "description": "A fusion of traditional Turkish delight with a rich chocolate coating and crunchy pistachios."
+                },
+                {
+                  "name": "Rose Turkish Delight with Chocolate",
+                  "description": "Classic rose-flavored Turkish delight wrapped in smooth milk chocolate."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bompi",
+      "location": "Turkey",
+      "description": "Bompi specializes in high-quality baked goods and confectionery, offering a wide selection of meringues, cookies, and biscuits made with natural ingredients. With a focus on traditional flavors and modern recipes, Bompi ensures that each product delivers both taste and texture. Their commitment to quality and innovation makes them a trusted brand for consumers seeking indulgent yet high-quality baked treats.",
+      "categories": [
+        {
+          "name": "Meringues",
+          "subcategories": [
+            {
+              "name": "Classic Meringues",
+              "subcategories": [
+                {
+                  "name": "Chocolate Meringues",
+                  "description": "Light and airy meringues infused with rich chocolate flavor."
+                },
+                {
+                  "name": "Strawberry Meringues",
+                  "description": "Crisp meringues with a natural strawberry essence for a fruity treat."
+                },
+                {
+                  "name": "Lemon Meringues",
+                  "description": "Tangy and sweet lemon-flavored meringues for a citrusy delight."
+                },
+                {
+                  "name": "Vanilla Meringues",
+                  "description": "Classic vanilla-flavored meringues for a smooth and sweet taste."
+                },
+                {
+                  "name": "Mixed Fruits Meringues",
+                  "description": "A colorful variety of fruit-infused meringues with natural flavors."
+                },
+                {
+                  "name": "Raspberry Meringues",
+                  "description": "A vibrant, tart raspberry-flavored meringue with a crisp texture."
+                }
+              ]
+            },
+            {
+              "name": "Specialty Meringues",
+              "subcategories": [
+                {
+                  "name": "Meringue Nests",
+                  "description": "Delicate meringue shells perfect for filling with fruits, cream, or chocolate."
+                },
+                {
+                  "name": "Cone Meringues",
+                  "description": "Crunchy, cone-shaped meringues available in various flavors."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cookies",
+          "subcategories": [
+            {
+              "name": "Classic Cookies",
+              "subcategories": [
+                {
+                  "name": "Butter Cookies",
+                  "description": "Traditional butter cookies with a rich, melt-in-your-mouth texture."
+                },
+                {
+                  "name": "Cinnamon & Ginger Cookies",
+                  "description": "Warm spiced cookies with a perfect balance of cinnamon and ginger flavors."
+                },
+                {
+                  "name": "Almond & Fig Cookies",
+                  "description": "A nutritious cookie made with almonds and dried figs for a chewy bite."
+                },
+                {
+                  "name": "Orange Flavored Cookies",
+                  "description": "Zesty and refreshing cookies infused with natural orange essence."
+                },
+                {
+                  "name": "Cappuccino Cookies",
+                  "description": "A coffee lover’s treat featuring a blend of cocoa and espresso flavors."
+                }
+              ]
+            },
+            {
+              "name": "Biscotti",
+              "subcategories": [
+                {
+                  "name": "Orange Biscotti",
+                  "description": "Crunchy, twice-baked Italian-style biscotti with a citrus twist."
+                },
+                {
+                  "name": "Cappuccino Biscotti",
+                  "description": "Aromatic biscotti flavored with cappuccino for a perfect coffee pairing."
+                },
+                {
+                  "name": "Whole Cocoa Biscotti",
+                  "description": "Rich chocolate biscotti made with whole cocoa for deep flavor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Biscuits",
+          "subcategories": [
+            {
+              "name": "Cream-Filled Biscuits",
+              "subcategories": [
+                {
+                  "name": "Vanilla Cream Biscuits",
+                  "description": "Crisp biscuits with a smooth and creamy vanilla filling."
+                },
+                {
+                  "name": "Cocoa Cream Biscuits",
+                  "description": "Crunchy cocoa biscuits with a luscious chocolate cream center."
+                }
+              ]
+            },
+            {
+              "name": "Chocolate-Coated Biscuits",
+              "subcategories": [
+                {
+                  "name": "Milk Chocolate Biscuits",
+                  "description": "Golden biscuits dipped in smooth milk chocolate."
+                },
+                {
+                  "name": "Dark Chocolate Biscuits",
+                  "description": "Crunchy biscuits coated in rich dark chocolate for a bold taste."
+                }
+              ]
+            },
+            {
+              "name": "Mini Biscuits",
+              "subcategories": [
+                {
+                  "name": "Mini Cocoa Biscuits with Cream",
+                  "description": "Bite-sized cocoa biscuits filled with creamy vanilla or chocolate."
+                },
+                {
+                  "name": "Mixed Tea Biscuit Box",
+                  "description": "An assortment of delicate biscuits perfect for pairing with tea."
+                }
+              ]
+            },
+            {
+              "name": "Caramel Biscuits",
+              "subcategories": [
+                {
+                  "name": "Caramelized Biscuits",
+                  "description": "Crispy biscuits with a hint of caramelized sugar for a buttery, sweet crunch."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ecoficus",
+      "location": "Extremadura, Spain",
+      "description": "Ecoficus is a family-owned business established in 2003, specializing in organic dried figs and derived products. Combining traditional Spanish recipes with modern, health-conscious trends, Ecoficus is committed to sustainability, using only natural ingredients and organic farming methods to deliver high-quality gourmet fig products.",
+      "categories": [
+        {
+          "name": "Figs",
+          "subcategories": [
+            {
+              "name": "Fig Cakes (Pastel de Higo)",
+              "description": "Traditional Spanish fig cakes made with organic dried 'Calabacita' figs, almonds, and natural spices such as orange and lemon peel, and cinnamon. A dense, naturally sweet delicacy that pairs well with cheeses and desserts."
+            },
+            {
+              "name": "Fig Bonbons",
+              "description": "Handcrafted chocolate-covered fig treats, featuring a core of organic figs filled with almond praline and coated in 71% Belgian dark chocolate."
+            },
+            {
+              "name": "Fig Snacks",
+              "description": "On-the-go healthy snacks combining figs with superfoods such as cranberries, pumpkin seeds, goji berries, and ginger for a natural energy boost. These snacks are 100% organic, with no preservatives, added sugars, gluten, or alcohol."
+            }
+          ]
+        },
+        {
+          "name": "Spreads",
+          "subcategories": [
+            {
+              "name": "Fig Jams & Spreads",
+              "description": "Organic fig preserves with natural sweeteners, perfect for pairing with bread, cheeses, and pastries."
+            },
+            {
+              "name": "Fig Vinegars",
+              "description": "Premium fig-infused balsamic and apple cider vinegars that add a sweet, tangy touch to salads and gourmet dishes."
+            },
+            {
+              "name": "Fig Honey",
+              "description": "A natural blend of fig extracts and honey, offering a rich, fruity alternative to traditional sweeteners."
+            }
+          ]
+        },
+        {
+          "name": "Dried & Preserved Figs",
+          "subcategories": [
+            {
+              "name": "Organic Dried Figs",
+              "description": "Hand-selected, sun-dried organic 'Calabacita' figs with a naturally rich flavor, available in various packaging options including vacuum-sealed and bulk."
+            },
+            {
+              "name": "Fig Paste",
+              "description": "A smooth, concentrated fig puree used as a natural sweetener or ingredient in baking and cooking. Available in bulk packaging of 5kg and 10kg."
+            },
+            {
+              "name": "Fig & Nut Mixes",
+              "description": "A blend of dried figs with almonds, walnuts, and hazelnuts, creating a nutritious and satisfying snack."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Elvan",
+      "location": "Turkey",
+      "description": "Established in 1952, Elvan is a prominent Turkish confectionery company offering a diverse range of products, including chocolates, candies, cakes, wafers, biscuits, and healthy snacks. With a commitment to quality and innovation, Elvan caters to various consumer preferences, including health-conscious options.",
+      "categories": [
+        {
+          "name": "Chocolate & Confectionery",
+          "subcategories": [
+            {
+              "name": "Fondant",
+              "description": "Soft, creamy confections with a smooth texture, available in various flavors."
+            },
+            {
+              "name": "Truffle Chocolate",
+              "description": "Rich, indulgent chocolate truffles with a velvety ganache center."
+            },
+            {
+              "name": "Tablet Chocolate",
+              "description": "Solid chocolate bars in different varieties, including milk, dark, and white chocolate."
+            },
+            {
+              "name": "Bar Chocolate",
+              "description": "Convenient chocolate bars, often combined with nuts, fruits, or other fillings."
+            },
+            {
+              "name": "Gift Chocolate",
+              "description": "Elegantly packaged chocolates suitable for gifting on special occasions."
+            },
+            {
+              "name": "Pastry Chocolates",
+              "description": "Chocolates designed for use in baking and pastry applications."
+            },
+            {
+              "name": "Breakfast Chocolates & Pastes",
+              "description": "Chocolate spreads and pastes ideal for breakfast or snacking."
+            },
+            {
+              "name": "For Kids",
+              "description": "A range of confectionery products specifically designed for children."
+            },
+            {
+              "name": "Lollipops",
+              "description": "Hard candy on a stick, available in various flavors and shapes."
+            },
+            {
+              "name": "Soft Candy",
+              "description": "Chewy and soft candies in assorted flavors."
+            },
+            {
+              "name": "Jelly",
+              "description": "Gelatin-based candies with a soft, chewy texture."
+            },
+            {
+              "name": "Turkish Delight",
+              "description": "Traditional Turkish confections made from starch and sugar, often flavored with rosewater or citrus."
+            },
+            {
+              "name": "Gum",
+              "description": "Chewing gums in various flavors."
+            }
+          ]
+        },
+        {
+          "name": "Bakery Products",
+          "subcategories": [
+            {
+              "name": "Croissant",
+              "description": "Flaky, buttery pastries, sometimes filled with chocolate or cream."
+            },
+            {
+              "name": "Donuts",
+              "description": "Fried dough confections, often glazed or filled."
+            },
+            {
+              "name": "Cake",
+              "description": "A variety of cakes, including sponge cakes and cream-filled options."
+            },
+            {
+              "name": "Cookie",
+              "description": "Baked cookies in various flavors and textures."
+            },
+            {
+              "name": "Cracker",
+              "description": "Savory or sweet crackers, suitable for snacking."
+            },
+            {
+              "name": "Biscuit",
+              "description": "A range of biscuits, from plain to cream-filled varieties."
+            },
+            {
+              "name": "Wafer Roll",
+              "description": "Crispy wafer rolls, often filled with cream or chocolate."
+            },
+            {
+              "name": "Uncoated Wafer",
+              "description": "Light, crispy wafers without any coating."
+            },
+            {
+              "name": "Coated Wafer",
+              "description": "Wafers coated with chocolate or other sweet coverings."
+            }
+          ]
+        },
+        {
+          "name": "Beverages",
+          "subcategories": [
+            {
+              "name": "Soda",
+              "description": "Carbonated soft drinks in various flavors."
+            },
+            {
+              "name": "Fruit Water",
+              "description": "Flavored water infused with fruit essences."
+            },
+            {
+              "name": "Ice Tea",
+              "description": "Chilled tea beverages, available in multiple flavors."
+            },
+            {
+              "name": "Energy Drink",
+              "description": "Beverages formulated to boost energy levels."
+            },
+            {
+              "name": "Milk Shake",
+              "description": "Creamy, flavored milk-based drinks."
+            },
+            {
+              "name": "Coffee",
+              "description": "Ready-to-drink coffee beverages."
+            }
+          ]
+        },
+        {
+          "name": "Healthy Food",
+          "subcategories": [
+            {
+              "name": "Snack Bar",
+              "description": "Nutritious bars made with wholesome ingredients, suitable for on-the-go consumption."
+            },
+            {
+              "name": "Snacks",
+              "description": "A variety of healthy snack options, including dried fruits and nuts."
+            },
+            {
+              "name": "Breakfast - Meal",
+              "description": "Convenient and healthy breakfast options, such as cereals and porridge."
+            },
+            {
+              "name": "Gluten-Free Products",
+              "description": "A selection of products formulated without gluten for those with dietary restrictions."
+            }
+          ]
+        },
+        {
+          "name": "Gift Products",
+          "subcategories": [
+            {
+              "name": "Packages",
+              "description": "Assorted gift packages containing a variety of Elvan products."
+            },
+            {
+              "name": "Cologne - Perfume",
+              "description": "Fragrances offered as part of gift sets."
+            }
+          ]
+        },
+        {
+          "name": "Ready Meals",
+          "description": "Pre-packaged meals that are quick and easy to prepare."
+        },
+        {
+          "name": "Imported Products",
+          "subcategories": [
+            {
+              "name": "Chocolate",
+              "description": "Imported chocolates from various international brands."
+            },
+            {
+              "name": "Confectionery",
+              "description": "A selection of imported candies and sweets."
+            },
+            {
+              "name": "Bakery Products",
+              "description": "Imported baked goods, including pastries and breads."
+            },
+            {
+              "name": "Biscuit-Cracker",
+              "description": "A variety of imported biscuits and crackers."
+            },
+            {
+              "name": "Chips",
+              "description": "Imported potato chips and other savory snacks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Biovencer Healthcare",
+      "location": "Greater Noida, India",
+      "description": "Biovencer Healthcare is a leading private label manufacturer specializing in nutraceuticals and medical nutrition products. With a commitment to quality and innovation, they offer a diverse range of products, including gummies, oral strips, diskettes, energy bars, liquid syrups, effervescent tablets, lozenges, probiotics, enzymes, micronutrient premixes, Ayurvedic products, and animal nutrition supplements. Biovencer provides customized formulations and packaging solutions to meet client needs.",
+      "categories": [
+        {
+          "name": "Nutraceuticals",
+          "subcategories": [
+            {
+              "name": "Gummies",
+              "subcategories": [
+                {
+                  "name": "Multivitamin Gummies",
+                  "description": "Gummies enriched with essential vitamins and minerals to support overall health."
+                },
+                {
+                  "name": "Calcium + Vitamin D3 Gummies",
+                  "description": "Gummies formulated to support bone health by providing calcium and vitamin D3."
+                },
+                {
+                  "name": "Melatonin Sleep Well Gummies",
+                  "description": "Gummies containing melatonin to promote better sleep quality."
+                },
+                {
+                  "name": "Biotin Gummies",
+                  "description": "Gummies infused with biotin to support healthy hair, skin, and nails."
+                },
+                {
+                  "name": "Immune Support Gummies",
+                  "description": "Gummies designed to boost the immune system with ingredients like vitamin C and zinc."
+                }
+              ]
+            },
+            {
+              "name": "Oral Strips",
+              "description": "Thin, fast-dissolving strips delivering active ingredients for quick absorption."
+            },
+            {
+              "name": "Diskettes",
+              "description": "Convenient, chewable tablets formulated for various health benefits."
+            },
+            {
+              "name": "Energy Bars",
+              "description": "Nutrient-dense bars providing a quick energy boost, suitable for active lifestyles."
+            },
+            {
+              "name": "Liquid Syrups",
+              "description": "Flavorful liquid supplements designed for easy consumption and rapid absorption."
+            },
+            {
+              "name": "Effervescent Tablets",
+              "description": "Tablets that dissolve in water to create a fizzy, nutrient-rich drink."
+            },
+            {
+              "name": "Lozenges",
+              "description": "Medicated lozenges formulated to soothe the throat and deliver active ingredients."
+            },
+            {
+              "name": "Probiotics",
+              "description": "Supplements containing beneficial bacteria to support digestive health."
+            },
+            {
+              "name": "Enzymes",
+              "description": "Digestive enzyme supplements aiding in the breakdown and absorption of nutrients."
+            },
+            {
+              "name": "Micronutrient Premixes",
+              "description": "Customized blends of vitamins and minerals tailored to specific health needs."
+            }
+          ]
+        },
+        {
+          "name": "Ayurvedic Products",
+          "subcategories": [
+            {
+              "name": "Herbal Supplements",
+              "description": "Capsules and tablets formulated with traditional Ayurvedic herbs for various health benefits."
+            },
+            {
+              "name": "Skin Care Products",
+              "description": "Natural creams and lotions designed to promote healthy, radiant skin."
+            },
+            {
+              "name": "Hair Care Products",
+              "description": "Herbal oils and shampoos aimed at nourishing the scalp and strengthening hair."
+            }
+          ]
+        },
+        {
+          "name": "Animal Nutrition",
+          "description": "Nutritional supplements formulated to support the health and well-being of animals."
+        }
+      ]
+    },
+    {
+      "name": "Fresshh",
+      "location": "N/A",
+      "description": "Fresshh is a premium beverage brand specializing in carbonated soft drinks with natural flavors. Offering a diverse range of fruit-flavored sodas, Fresshh ensures high-quality ingredients, vibrant flavors, and refreshing taste experiences. Their drinks are formulated with natural fruit extracts, low-calorie sweeteners, and carefully selected carbonation levels for maximum enjoyment.",
+      "categories": [
+        {
+          "name": "Carbonated Soft Drinks",
+          "subcategories": [
+            {
+              "name": "Classic Flavors",
+              "subcategories": [
+                {
+                  "name": "Cola Flavored Soda",
+                  "description": "A bold and fizzy cola-flavored soft drink with a balanced sweetness and caffeine-free formula."
+                },
+                {
+                  "name": "Lemon-Lime Soda",
+                  "description": "A crisp and tangy lemon-lime-flavored carbonated drink, offering a refreshing citrus kick."
+                }
+              ]
+            },
+            {
+              "name": "Fruit-Flavored Sodas",
+              "subcategories": [
+                {
+                  "name": "Strawberry Soda",
+                  "description": "A sweet and fruity strawberry-flavored soda with a fizzy, refreshing twist."
+                },
+                {
+                  "name": "Peach Soda",
+                  "description": "A juicy and aromatic peach-flavored carbonated beverage, delivering a smooth, well-balanced taste."
+                },
+                {
+                  "name": "Watermelon Soda",
+                  "description": "A thirst-quenching, summer-inspired watermelon-flavored soda with a mild sweetness."
+                },
+                {
+                  "name": "Apple-Cherry Soda",
+                  "description": "A blend of crisp apple and tart cherry flavors, perfectly harmonized with light carbonation."
+                },
+                {
+                  "name": "Mango-Passionfruit Soda",
+                  "description": "A tropical mango and passionfruit-infused soda, combining vibrant and exotic flavors."
+                },
+                {
+                  "name": "Melon Soda",
+                  "description": "A refreshing melon-flavored soda with a naturally sweet and fruity aroma."
+                },
+                {
+                  "name": "Blueberry-Blackcurrant Soda",
+                  "description": "A rich, deep berry blend featuring the flavors of juicy blueberries and tart blackcurrants."
+                }
+              ]
+            },
+            {
+              "name": "Specialty Sodas",
+              "subcategories": [
+                {
+                  "name": "Cotton Candy & Caramel Soda",
+                  "description": "A nostalgic blend of cotton candy and caramel flavors, offering a unique, indulgent soda experience."
+                },
+                {
+                  "name": "Pineapple-Coconut Soda",
+                  "description": "A tropical fusion of tangy pineapple and creamy coconut, delivering a refreshing island-inspired drink."
+                },
+                {
+                  "name": "Ginger-Lemon-Mint Soda",
+                  "description": "A bold, slightly spicy combination of ginger, zesty lemon, and cooling mint, creating a revitalizing beverage."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pete's Luxury Wholefoods ",
+      "location": "Vietnam",
+      "description": "Pete's Luxury Wholefoods is a premium snack brand founded in 2020, dedicated to creating nutritious and eco-friendly snacks using high-quality, natural ingredients from Southeast Asia. Focused on sustainability, Pete's Luxury Wholefoods offers biodegradable packaging and partners with Vietnamese farmers who practice sustainable agriculture. The brand specializes in products designed for active and health-conscious consumers, offering a balance of great taste, functionality, and environmental responsibility.",
+      "categories": [
+        {
+          "name": "Nutrition Bars",
+          "subcategories": [
+            {
+              "name": "Fruit-Based Nutrition Bars",
+              "subcategories": [
+                {
+                  "name": "Mango Coconut Bar",
+                  "description": "A tropical blend of sweet mango, prunes, and coconut flakes, offering a chewy texture with natural energy for sports and active lifestyles."
+                },
+                {
+                  "name": "Tropical Fruits Bar",
+                  "description": "A mix of dried pineapple, banana, prunes, and puffed brown rice, providing a light yet nutrient-dense snack."
+                }
+              ]
+            },
+            {
+              "name": "Cacao-Based Nutrition Bars",
+              "subcategories": [
+                {
+                  "name": "Cacao Banana Bar",
+                  "description": "A fusion of dark cacao from South Vietnam and chewy dried banana, combined with crunchy roasted cashews and cacao nibs."
+                }
+              ]
+            },
+            {
+              "name": "Spiced Nutrition Bars",
+              "subcategories": [
+                {
+                  "name": "Banana Cinnamon Bar",
+                  "description": "A delicious blend of sweet banana and rich Vietnamese cinnamon, inspired by banana bread, with added crunch from pumpkin seeds and puffed brown rice."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Granola Bites",
+          "subcategories": [
+            {
+              "name": "Matcha Latte Granola Bites",
+              "description": "A combination of Vietnamese matcha, coconut milk, and crunchy nuts and seeds, delivering a balanced sweet-umami flavor."
+            },
+            {
+              "name": "Salted Egg Granola Bites",
+              "description": "A savory Southeast Asian-inspired snack featuring egg yolk powder, nuts, and seeds, balanced with a hint of coconut nectar."
+            },
+            {
+              "name": "Mocha Granola Bites",
+              "description": "A rich mix of Vietnamese dark chocolate from Dak Lak and roasted Arabica coffee from Lam Dong, combined with crunchy nuts and seeds."
+            }
+          ]
+        },
+        {
+          "name": "Sustainability Initiatives",
+          "subcategories": [
+            {
+              "name": "Biodegradable Packaging",
+              "description": "All nutrition bars are wrapped in 100% biodegradable and home-compostable packaging, made from paper, cellulose, and corn starch."
+            },
+            {
+              "name": "Recyclable Packaging",
+              "description": "Granola Bites are packaged in fully recyclable single-layer plastic, with plans to incorporate recycled materials."
+            },
+            {
+              "name": "Sustainable Farming Practices",
+              "description": "Pete's Luxury Wholefoods sources ingredients from Vietnamese farmers who avoid chemical fertilizers and prioritize sustainable agriculture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lumicita",
+      "location": "Turkey",
+      "description": "Lumicita is a premium confectionery and beverage brand specializing in high-quality chocolates, Turkish delights, nuts, coffee, freeze-dried products, and dates. With a strong focus on innovative packaging, design, and gifting concepts, Lumicita blends taste with visual elegance to create a unique consumer experience. The brand offers a diverse range of products that cater to both retail shelves and luxury gifting.",
+      "categories": [
+        {
+          "name": "Chocolates",
+          "subcategories": [
+            {
+              "name": "Luxury Chocolate Collections",
+              "subcategories": [
+                {
+                  "name": "Carres Premium Collection",
+                  "description": "A high-end selection of fine chocolates available in Gold, Grey, and Black editions, with elegant packaging and superior ingredients."
+                },
+                {
+                  "name": "3D Collection",
+                  "description": "Uniquely shaped chocolates with intricate designs, available in Gold, Grey, and Black series."
+                },
+                {
+                  "name": "Festival Truffle Box",
+                  "description": "An assorted collection of handcrafted chocolate truffles, perfect for gifting."
+                },
+                {
+                  "name": "Luxury Bar Collection",
+                  "description": "Exclusive chocolate bars featuring rich flavors and premium packaging."
+                }
+              ]
+            },
+            {
+              "name": "Seasonal Chocolates",
+              "subcategories": [
+                {
+                  "name": "Easter Egg Chocolate Coloring Kit",
+                  "description": "A fun and interactive chocolate kit for Easter, including colorable chocolate eggs."
+                },
+                {
+                  "name": "Easter Mini Pralin Box",
+                  "description": "A festive selection of pralines crafted for Easter celebrations."
+                },
+                {
+                  "name": "New Year’s Chocolate Collection",
+                  "description": "A holiday-themed chocolate set, including chocolate trees, Santa figures, and gift boxes."
+                },
+                {
+                  "name": "Ramadan Chocolate Collection",
+                  "description": "Specially curated chocolates and pralines for Ramadan celebrations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Turkish Delight",
+          "subcategories": [
+            {
+              "name": "Classic Assorted Turkish Delight",
+              "description": "Traditional Turkish delight made with premium ingredients, available in assorted flavors."
+            },
+            {
+              "name": "Turkish Delight Gift Boxes",
+              "description": "Elegant packaging with premium Turkish delight selections, designed for gifting."
+            }
+          ]
+        },
+        {
+          "name": "Dates & Date-Based Products",
+          "subcategories": [
+            {
+              "name": "Chocolate Coated Dates",
+              "description": "Premium dates dipped in rich chocolate, offering a delightful blend of sweetness and texture."
+            },
+            {
+              "name": "Luxury Date Gift Box",
+              "description": "A high-end assortment of gourmet date varieties, presented in stylish packaging."
+            }
+          ]
+        },
+        {
+          "name": "Freeze-Dried Products",
+          "subcategories": [
+            {
+              "name": "Freeze-Dried Candies",
+              "description": "Colorful, crunchy, and intensely flavored candies made using freeze-drying technology."
+            }
+          ]
+        },
+        {
+          "name": "Coffee",
+          "subcategories": [
+            {
+              "name": "Turkish Coffee",
+              "description": "Authentic Turkish coffee with a bold, rich flavor and traditional preparation method."
+            },
+            {
+              "name": "Flavored Coffee",
+              "description": "Specialty coffee blends infused with flavors such as vanilla, hazelnut, and caramel."
+            }
+          ]
+        },
+        {
+          "name": "Cookies & Biscuits",
+          "subcategories": [
+            {
+              "name": "Butter Cookies",
+              "description": "Classic butter cookies with a rich, melt-in-your-mouth texture."
+            },
+            {
+              "name": "Tea-Time Cookies",
+              "description": "A delightful selection of cookies, ideal for pairing with tea or coffee."
+            }
+          ]
+        },
+        {
+          "name": "Gift & Special Edition Products",
+          "subcategories": [
+            {
+              "name": "Heart of Roses Gift Box",
+              "description": "A romantic collection of chocolates arranged in a heart-shaped gift box."
+            },
+            {
+              "name": "Lucky Box Collection",
+              "description": "A mystery box filled with premium chocolates and confections."
+            },
+            {
+              "name": "Authentic Purple Box",
+              "description": "An elegantly packaged selection of traditional Turkish sweets and chocolates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ayurvedhika",
+      "location": "Tamil Nadu, India",
+      "description": "Ayurvedhika is dedicated to promoting health and wellness through natural products. They offer a diverse range of items, including health supplements, ready-mix products, flavored teas, energy drinks, personal care items, tablets and capsules, as well as energy bars and cookies. Their mission is to harness the benefits of nature to provide everyday goodness and wellness to people globally.",
+      "categories": [
+        {
+          "name": "Health Supplements",
+          "subcategories": [
+            {
+              "name": "Moringa Leaf Powder",
+              "description": "A nutrient-rich powder made from dried Moringa leaves, known for its high content of vitamins, minerals, and antioxidants."
+            },
+            {
+              "name": "Wonder Mix",
+              "description": "A blend of natural ingredients formulated to support overall health and vitality."
+            },
+            {
+              "name": "Movita Sprouted Energy Powder (Plain)",
+              "description": "An energy-boosting powder made from sprouted grains, designed to provide sustained energy."
+            },
+            {
+              "name": "Movita Sprouted Energy Powder with Pure Choco Flavor and Jaggery",
+              "description": "A chocolate-flavored version of the sprouted energy powder, sweetened with natural jaggery."
+            }
+          ]
+        },
+        {
+          "name": "Ready Mix Products",
+          "subcategories": [
+            {
+              "name": "Moringa Idly/Dosa Chutney Powder",
+              "description": "A flavorful chutney powder infused with Moringa, ideal for pairing with South Indian dishes like idly and dosa."
+            },
+            {
+              "name": "Moringa Rice Mix Powder",
+              "description": "A convenient mix that adds the nutritional benefits of Moringa to rice dishes."
+            },
+            {
+              "name": "Drumstick Pulp Soup",
+              "description": "A ready-to-use soup mix made from drumstick pulp, offering a nutritious and easy meal option."
+            }
+          ]
+        },
+        {
+          "name": "Flavored Tea",
+          "subcategories": [
+            {
+              "name": "Moringa Lemon Tea",
+              "description": "A refreshing tea blend combining the health benefits of Moringa with a zesty lemon flavor."
+            },
+            {
+              "name": "Moringa Mint Tea",
+              "description": "A soothing tea that pairs Moringa with the coolness of mint."
+            },
+            {
+              "name": "Moringa Ginger Tea",
+              "description": "A warming tea blend that combines Moringa with the spicy kick of ginger."
+            },
+            {
+              "name": "Moringa Herbal Tea",
+              "description": "A herbal infusion featuring Moringa and other beneficial herbs."
+            }
+          ]
+        },
+        {
+          "name": "Energy Drinks",
+          "subcategories": [
+            {
+              "name": "ASM Immune Booster",
+              "description": "A drink formulated to enhance the immune system, made with natural ingredients."
+            },
+            {
+              "name": "Moringa Energy Drops",
+              "description": "Concentrated drops infused with Moringa, designed to boost energy levels when added to water or other beverages."
+            }
+          ]
+        },
+        {
+          "name": "Personal Care",
+          "subcategories": [
+            {
+              "name": "Moringa Beauty Drops",
+              "description": "A skincare product enriched with Moringa oil, aimed at nourishing and revitalizing the skin."
+            },
+            {
+              "name": "Moringa Body Scrub",
+              "description": "An exfoliating scrub that utilizes Moringa to cleanse and rejuvenate the skin."
+            },
+            {
+              "name": "Moringa Face Pack",
+              "description": "A facial treatment mask containing Moringa, designed to purify and brighten the complexion."
+            },
+            {
+              "name": "Moringa Hair Oil",
+              "description": "A nourishing hair oil infused with Moringa, promoting healthy scalp and hair growth."
+            }
+          ]
+        },
+        {
+          "name": "Tablets & Capsules",
+          "subcategories": [
+            {
+              "name": "Moringa Leaf Tablets",
+              "description": "Tablets made from pure Moringa leaf powder, providing a convenient way to consume Moringa daily."
+            },
+            {
+              "name": "Moringa Capsules",
+              "description": "Vegetarian capsules containing Moringa leaf extract, offering an easy-to-swallow supplement option."
+            },
+            {
+              "name": "Moringa Flower Tablets",
+              "description": "Tablets crafted from Moringa flowers, known for their unique health benefits."
+            },
+            {
+              "name": "Spirulina Tablets",
+              "description": "Tablets made from Spirulina, a nutrient-dense blue-green algae known for its high protein and vitamin content."
+            },
+            {
+              "name": "Triphala Tablets",
+              "description": "A traditional Ayurvedic formulation combining three fruits, aimed at supporting digestive health."
+            },
+            {
+              "name": "Moringa Amla Tablets",
+              "description": "Tablets that blend Moringa with Amla, providing a rich source of vitamin C and antioxidants."
+            }
+          ]
+        },
+        {
+          "name": "Energy Bars and Cookies",
+          "subcategories": [
+            {
+              "name": "Moringa Foxtail Millet Cookies",
+              "description": "Healthy cookies made with foxtail millet and infused with Moringa, offering a nutritious snack option."
+            },
+            {
+              "name": "Moringa Energy Bar",
+              "description": "A compact energy bar combining Moringa with other natural ingredients to provide a quick energy boost."
+            },
+            {
+              "name": "Colostrum Energy Bar",
+              "description": "An energy bar enriched with colostrum, aimed at supporting immune health and vitality."
+            },
+            {
+              "name": "Amaranth Puffed Twin Bar",
+              "description": "A twin-pack bar made from puffed amaranth, offering a light and crunchy snack."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bakali",
+      "location": "South Africa",
+      "description": "Bakali is a leading producer of healthy, baked snack products, including rice cakes, corn cakes, popped lentil chips, coated mini rice cakes, tortilla chips, and corn bites. The brand focuses on producing high-fiber, gluten-free, air-popped, and MSG-free snacks that cater to health-conscious consumers. Their product range includes both plain and flavored options, suitable for various dietary needs.",
+      "categories": [
+        {
+          "name": "Rice Cakes",
+          "subcategories": [
+            {
+              "name": "Plain Rice Cakes",
+              "subcategories": [
+                {
+                  "name": "Rice Cake Salt",
+                  "description": "Classic salted rice cakes, air-popped and rich in fiber."
+                },
+                {
+                  "name": "Rice Cake No Salt",
+                  "description": "Unsalted rice cakes for a neutral, versatile snack option."
+                },
+                {
+                  "name": "Rice Cake Multi Seed",
+                  "description": "A blend of seeds and rice cakes, providing extra crunch and nutrition."
+                }
+              ]
+            },
+            {
+              "name": "Coated Rice Cakes",
+              "subcategories": [
+                {
+                  "name": "Carob Coated Rice Cakes",
+                  "description": "Rice cakes coated with carob, a caffeine-free alternative to chocolate."
+                },
+                {
+                  "name": "Yoghurt Coated Rice Cakes",
+                  "description": "Lightly sweetened rice cakes coated with creamy yoghurt."
+                },
+                {
+                  "name": "Strawberry Coated Rice Cakes",
+                  "description": "Rice cakes covered in a delicious strawberry-flavored coating."
+                },
+                {
+                  "name": "Caramel Coated Rice Cakes",
+                  "description": "A sweet caramel coating over crispy rice cakes."
+                }
+              ]
+            },
+            {
+              "name": "Coated Mini Rice Cakes",
+              "subcategories": [
+                {
+                  "name": "Mini Carob Coated Rice Cakes",
+                  "description": "Bite-sized carob-coated rice cakes, a healthier alternative to chocolate snacks."
+                },
+                {
+                  "name": "Mini Yoghurt Coated Rice Cakes",
+                  "description": "Small, crunchy rice cakes coated with smooth yoghurt."
+                },
+                {
+                  "name": "Mini Strawberry Coated Rice Cakes",
+                  "description": "Mini rice cakes covered in a fruity strawberry layer."
+                },
+                {
+                  "name": "Mini Caramel Coated Rice Cakes",
+                  "description": "Crispy mini rice cakes with a rich caramel coating."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Corn Cakes",
+          "subcategories": [
+            {
+              "name": "Plain Corn Cakes",
+              "subcategories": [
+                {
+                  "name": "Corn Cakes",
+                  "description": "Classic, lightly salted corn cakes, air-popped and gluten-free."
+                },
+                {
+                  "name": "White Corn Cakes",
+                  "description": "A variant of classic corn cakes made with white corn."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Veggie Cakes",
+          "subcategories": [
+            {
+              "name": "Lentil Cake",
+              "description": "A high-protein lentil-based cake, rich in fiber and nutrients."
+            },
+            {
+              "name": "Sweet Potato Cake",
+              "description": "Naturally sweet, vitamin-rich rice cakes made with sweet potato."
+            },
+            {
+              "name": "Carrot Cake",
+              "description": "Crispy, vegetable-based cakes infused with real carrot for a natural taste."
+            }
+          ]
+        },
+        {
+          "name": "Tortilla Chips",
+          "subcategories": [
+            {
+              "name": "Himalayan Pink Salt Tortilla Chips",
+              "description": "Lightly salted tortilla chips made with Himalayan pink salt."
+            },
+            {
+              "name": "Mexican Chilli Tortilla Chips",
+              "description": "Spicy tortilla chips with bold Mexican chili seasoning."
+            },
+            {
+              "name": "Sour Cream & Chives Tortilla Chips",
+              "description": "Tortilla chips flavored with tangy sour cream and fresh chives."
+            },
+            {
+              "name": "Salt & Vinegar Tortilla Chips",
+              "description": "A crispy tortilla chip with a classic salt and vinegar twist."
+            }
+          ]
+        },
+        {
+          "name": "Popped Lentil Chips",
+          "subcategories": [
+            {
+              "name": "Pickled Onion Lentil Chips",
+              "description": "Popped lentil chips infused with the tangy taste of pickled onions."
+            },
+            {
+              "name": "Sweet Chilli Lentil Chips",
+              "description": "A spicy and slightly sweet blend of chili seasoning on lentil chips."
+            },
+            {
+              "name": "Fruit Chutney Lentil Chips",
+              "description": "A uniquely flavored chip featuring a blend of sweet and savory chutney spices."
+            },
+            {
+              "name": "Salt & Vinegar Lentil Chips",
+              "description": "A classic salt and vinegar flavor, perfectly paired with lentil chips."
+            }
+          ]
+        },
+        {
+          "name": "Corn Bites",
+          "subcategories": [
+            {
+              "name": "Burnt Butter Corn Bites",
+              "description": "Corn bites flavored with rich burnt butter for a deep, nutty taste."
+            },
+            {
+              "name": "Sweet Chilli Corn Bites",
+              "description": "Crispy corn bites seasoned with a sweet and spicy chili blend."
+            },
+            {
+              "name": "Fruit Chutney Corn Bites",
+              "description": "A sweet and tangy corn bite infused with chutney flavors."
+            },
+            {
+              "name": "Salt & Vinegar Corn Bites",
+              "description": "A crunchy corn snack seasoned with salt and vinegar for a classic taste."
+            },
+            {
+              "name": "Honey & Mustard Corn Bites",
+              "description": "A unique combination of sweet honey and tangy mustard in a crispy corn snack."
+            }
+          ]
+        },
+        {
+          "name": "Kids' Snack Range",
+          "subcategories": [
+            {
+              "name": "Apple Cinnamon Kiddies Snack",
+              "description": "A lightly spiced apple and cinnamon-flavored snack designed for children."
+            },
+            {
+              "name": "Creamy Cheddar Kiddies Snack",
+              "description": "A cheesy, creamy snack with a mild and delicious cheddar flavor."
+            },
+            {
+              "name": "Fruit Chutney Kiddies Snack",
+              "description": "A fruit-infused chutney-flavored snack for kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Z Natural Foods",
+      "location": "United States",
+      "description": "Z Natural Foods is dedicated to providing high-quality, organic, and natural superfoods at reasonable prices. Their extensive product range includes antioxidants, essential fatty acids, proteins, collagens, seasonings, spices, superfood blends, sweeteners, and various vegetable, leaf, and grass powders. They offer a wide array of nutrient-rich foods to support overall health and wellness.",
+      "categories": [
+        {
+          "name": "Weekly Sale Items",
+          "description": "A selection of superfoods and natural products offered at discounted prices, updated weekly.",
+          "subcategories": []
+        },
+        {
+          "name": "Proteins & Collagens",
+          "description": "A variety of protein powders and collagen supplements to support muscle health and skin elasticity.",
+          "subcategories": []
+        },
+        {
+          "name": "Seasonings & Spices",
+          "description": "Natural and organic seasonings and spices to enhance the flavor and nutritional value of meals.",
+          "subcategories": []
+        },
+        {
+          "name": "Superfood Blends",
+          "description": "Expertly crafted blends of superfoods designed to provide comprehensive nutritional support.",
+          "subcategories": []
+        },
+        {
+          "name": "Sweeteners",
+          "description": "Natural and organic sweeteners as healthier alternatives to refined sugar.",
+          "subcategories": []
+        },
+        {
+          "name": "Vegetable, Leaf & Grass Powders",
+          "description": "Powdered forms of various vegetables, leaves, and grasses, offering concentrated nutrients for easy incorporation into diets.",
+          "subcategories": []
+        },
+        {
+          "name": "Dried Fruit & Berries",
+          "description": "A selection of dried fruits and berries, providing natural sweetness and essential nutrients.",
+          "subcategories": []
+        },
+        {
+          "name": "Freeze Dried",
+          "description": "Freeze-dried fruits and vegetables that retain their nutritional value and flavor, ideal for long-term storage.",
+          "subcategories": []
+        },
+        {
+          "name": "Algae & Seaweeds",
+          "description": "Nutrient-dense algae and seaweed products rich in minerals and antioxidants.",
+          "subcategories": []
+        },
+        {
+          "name": "Herb & Root Powders",
+          "description": "A variety of powdered herbs and roots known for their traditional health benefits.",
+          "subcategories": []
+        },
+        {
+          "name": "Fruit Powders",
+          "description": "Concentrated fruit powders offering the flavor and nutrients of fresh fruits in a convenient form.",
+          "subcategories": []
+        },
+        {
+          "name": "Bee Products",
+          "description": "Natural bee-derived products like honey and bee pollen, known for their health-promoting properties.",
+          "subcategories": []
+        },
+        {
+          "name": "Cacao",
+          "description": "A range of cacao products, including powders and nibs, rich in antioxidants and flavor.",
+          "subcategories": []
+        },
+        {
+          "name": "Organic Tea",
+          "description": "A selection of organic teas sourced from high-quality leaves and herbs.",
+          "subcategories": []
+        },
+        {
+          "name": "Nuts & Seeds",
+          "description": "A variety of raw and organic nuts and seeds, providing healthy fats and proteins.",
+          "subcategories": []
+        },
+        {
+          "name": "Emergency Food Storage",
+          "description": "Long-lasting, nutrient-dense foods suitable for emergency preparedness.",
+          "subcategories": []
+        }
+      ]
+    }
+  ]
+}
+
+    
+
+
+
+
+
+
+          
