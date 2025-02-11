@@ -413,7 +413,7 @@ export default function Home() {
 
 
       <a
-  href="https://your-marketplace-link.com" // Replace with your desired link
+  href="https://harvestmarketplace.netlify.app/" // Replace with your desired link
   target="_blank" // Opens the link in a new tab
   rel="noopener noreferrer" // Improves security for external links
   style={{
