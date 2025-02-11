@@ -10,64 +10,11 @@ import { useRouter } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import React from 'react';
-import { motion } from 'framer-motion';
 
-// -----------------------------
-// Floating Particles for 3D Background Effect
-// -----------------------------
-const FloatingParticles = () => (
-  <>
-    <motion.div
-      style={{
-        position: 'absolute',
-        top: '10%',
-        left: '5%',
-        width: 50,
-        height: 50,
-        background: 'rgba(255,255,255,0.3)',
-        borderRadius: '50%',
-        filter: 'blur(4px)',
-        zIndex: 0,
-      }}
-      animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
-      transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-    />
-    <motion.div
-      style={{
-        position: 'absolute',
-        bottom: '20%',
-        right: '10%',
-        width: 70,
-        height: 70,
-        background: 'rgba(255,255,255,0.2)',
-        borderRadius: '50%',
-        filter: 'blur(6px)',
-        zIndex: 0,
-      }}
-      animate={{ x: [0, -80, 0], y: [0, 40, 0] }}
-      transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-    />
-    <motion.div
-      style={{
-        position: 'absolute',
-        top: '40%',
-        left: '70%',
-        width: 40,
-        height: 40,
-        background: 'rgba(255,255,255,0.25)',
-        borderRadius: '50%',
-        filter: 'blur(3px)',
-        zIndex: 0,
-      }}
-      animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
-      transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-    />
-  </>
-);
+/* -----------------------------
+   Outer Container & Header
+------------------------------*/
 
-// -----------------------------
-// Styled Components
-// -----------------------------
 const OuterContainer = styled(Box)(({ theme }) => ({
   width: '100vw',
   height: '100vh',
@@ -88,6 +35,10 @@ const Header = styled(Box)(({ theme }) => ({
   zIndex: 1,
   transform: 'translateZ(0)',
 }));
+
+/* -----------------------------
+   3D Message Bubbles
+------------------------------*/
 
 const AssistantMessageBubble = styled(Box)(({ theme }) => ({
   backgroundColor: '#FFFFFF',
@@ -151,7 +102,7 @@ const Timestamp = styled(Typography)(({ theme }) => ({
   color: '#777777',
   alignSelf: 'flex-end',
   marginTop: '4px',
-  fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
+  fontFamily: "Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif",
 }));
 
 const TypingIndicator = () => (
@@ -160,7 +111,7 @@ const TypingIndicator = () => (
       variant="body2"
       sx={{
         color: '#666666',
-        fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
+        fontFamily: "Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif",
       }}
     >
       Typing...
@@ -175,64 +126,23 @@ const getCurrentTime = () => {
   return `${hours}:${minutes}`;
 };
 
-// -----------------------------
-// Framer Motion Variants
-// -----------------------------
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, when: 'beforeChildren' },
-  },
-};
+/* -----------------------------
+   Main Chat Component
+------------------------------*/
 
-const messageVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 30 },
-  },
-};
-
-const headerVariants = {
-  hidden: { y: -50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: 'spring', stiffness: 200, damping: 20 },
-  },
-};
-
-const buttonVariants = {
-  hover: { scale: 1.1, transition: { duration: 0.3 } },
-  tap: { scale: 0.95 },
-};
-
-// -----------------------------
-// Main Chat Component
-// -----------------------------
 export default function Home() {
   const router = useRouter();
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Hi! I'm Harv. How can I help you explore manufacturers today? 😀`,
+      content: "Hi! I'm Harvest AI. How can I help you explore manufacturers today? 😀",
       timestamp: getCurrentTime(),
     },
   ]);
+  
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isAssistantTyping, setIsAssistantTyping] = useState(false);
-
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
-  // Auto-scroll to the bottom on new messages
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
 
   const sendMessage = async () => {
     if (!message.trim() || isLoading) return;
@@ -241,7 +151,11 @@ export default function Home() {
     const newUserMessage = { role: 'user', content: message, timestamp: getCurrentTime() };
     const newAssistantMessage = { role: 'assistant', content: '. . .', timestamp: getCurrentTime() };
 
-    setMessages((prev) => [...prev, newUserMessage, newAssistantMessage]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      newUserMessage,
+      newAssistantMessage,
+    ]);
     setIsAssistantTyping(true);
 
     try {
@@ -261,10 +175,14 @@ export default function Home() {
           const { done, value } = await reader.read();
           if (done) break;
           updatedContent += decoder.decode(value, { stream: true });
-          setMessages((prev) => {
-            const updated = [...prev];
-            updated[updated.length - 1] = { ...updated[updated.length - 1], content: updatedContent };
-            return updated;
+
+          setMessages((prevMessages) => {
+            const updatedMessages = [...prevMessages];
+            updatedMessages[updatedMessages.length - 1] = {
+              ...updatedMessages[updatedMessages.length - 1],
+              content: updatedContent,
+            };
+            return updatedMessages;
           });
         }
       } else {
@@ -272,9 +190,13 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error:', error);
-      setMessages((prev) => [
-        ...prev,
-        { role: 'assistant', content: 'There was an error processing your request. 😕', timestamp: getCurrentTime() },
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        {
+          role: 'assistant',
+          content: 'There was an error processing your request. 😕',
+          timestamp: getCurrentTime(),
+        },
       ]);
     }
 
@@ -290,11 +212,19 @@ export default function Home() {
     }
   };
 
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const scrollToBottom = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   return (
     <OuterContainer>
-      {/* Floating Particles Background */}
-      <FloatingParticles />
-
       <Stack
         direction="column"
         width="100%"
@@ -305,8 +235,6 @@ export default function Home() {
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          position: 'relative',
-          zIndex: 1,
         }}
       >
         {/* Header */}
@@ -316,10 +244,10 @@ export default function Home() {
             sx={{
               fontWeight: 'bold',
               letterSpacing: 0.5,
-              fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
+              fontFamily: "Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif",
             }}
           >
-            Harv
+            Harvest AI
           </Typography>
         </Header>
 
@@ -335,46 +263,40 @@ export default function Home() {
           }}
         >
           {messages.map((msg, index) => (
-            <motion.div
+            <Box
               key={index}
-              initial={{ y: 0, scale: 1 }}
-              animate={{ y: [0, -3, 0], scale: [1, 1.02, 1] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              display="flex"
+              justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
+              mb={2}
             >
-              <Box
-                display="flex"
-                justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
-                mb={2}
-              >
-                <Stack direction="row" spacing={1} alignItems="flex-end">
-                  {msg.role === 'assistant' ? (
-                    <>
-                      <Avatar sx={{ backgroundColor: '#66BB6A', width: 40, height: 40 }}>
-                        <AutoAwesomeIcon />
-                      </Avatar>
-                      <AssistantMessageBubble>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                          {msg.content}
-                        </ReactMarkdown>
-                        <Timestamp>{msg.timestamp}</Timestamp>
-                      </AssistantMessageBubble>
-                    </>
-                  ) : (
-                    <>
-                      <UserMessageBubble>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                          {msg.content}
-                        </ReactMarkdown>
-                        <Timestamp>{msg.timestamp}</Timestamp>
-                      </UserMessageBubble>
-                      <Avatar sx={{ backgroundColor: '#388E3C', width: 40, height: 40 }}>
-                        <PersonIcon />
-                      </Avatar>
-                    </>
-                  )}
-                </Stack>
-              </Box>
-            </motion.div>
+              <Stack direction="row" spacing={1} alignItems="flex-end">
+                {msg.role === 'assistant' ? (
+                  <>
+                    <Avatar sx={{ backgroundColor: '#66BB6A', width: 40, height: 40 }}>
+                      <AutoAwesomeIcon />
+                    </Avatar>
+                    <AssistantMessageBubble>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {msg.content}
+                      </ReactMarkdown>
+                      <Timestamp>{msg.timestamp}</Timestamp>
+                    </AssistantMessageBubble>
+                  </>
+                ) : (
+                  <>
+                    <UserMessageBubble>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {msg.content}
+                      </ReactMarkdown>
+                      <Timestamp>{msg.timestamp}</Timestamp>
+                    </UserMessageBubble>
+                    <Avatar sx={{ backgroundColor: '#388E3C', width: 40, height: 40 }}>
+                      <PersonIcon />
+                    </Avatar>
+                  </>
+                )}
+              </Stack>
+            </Box>
           ))}
           {isAssistantTyping && <TypingIndicator />}
           <div ref={messagesEndRef} aria-live="polite" />
@@ -426,12 +348,12 @@ export default function Home() {
 
       {/* Action Buttons */}
       <Button
-        onClick={() => router.push('/addProfessor')}
+        onClick={() => window.location.href = 'https://harvestmarketplace.netlify.app/'}
         variant="contained"
         sx={{
           position: 'absolute',
-          bottom: 16,
-          right: 16,
+          bottom: 105,
+          right: 25,
           padding: '6px 12px',
           fontSize: '0.875rem',
           borderRadius: '8px',
@@ -439,7 +361,7 @@ export default function Home() {
           '&:hover': { backgroundColor: '#2E7D32' },
         }}
       >
-        Add Manufacturer
+        Marketplace
       </Button>
       <Button
         onClick={() => router.push('/')}

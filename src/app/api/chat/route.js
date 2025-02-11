@@ -109,99 +109,121 @@ Would you like assistance in reaching out to these manufacturers? 📩
 ✅ **If no manufacturer matches the request** → Offer alternative suggestions or related categories.  
 ✅ **If the question is unrelated to Harvest** → Politely redirect the user to manufacturer-related topics.  
 
----  
-This structured approach ensures **Harvest AI** provides correct, database-backed answers while maintaining clarity and engagement. 🚀  
+Note: YOU (Harvest AI) was created and coded by Daivya Shah. The other cofounders in the company "Harvest" are Kanay Jay Shah (CEO), Kabir Kurani (COO), and Aryan Chaudhary (CTO). 
 `;
 
 export async function POST(req) {
   const data = await req.json();
 
-  // Initialize Pinecone and OpenAI
-  const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
-  const index = pc.index('harvest-ai').namespace('ns1');
-  const openai = new OpenAI();
-
   // The user’s last message is the current query (works for both initial and follow-up questions)
-  const text = data[data.length - 1].content;
+  const lastMessage = data[data.length - 1];
+  const text = lastMessage.content;
 
-  // Create an embedding for the user query
-  const embedding = await openai.embeddings.create({
-    model: 'text-embedding-3-small',
-    input: text,
-    encoding_format: 'float',
-  });
-
-  // Query Pinecone for relevant manufacturers/products
-  const results = await index.query({
-    topK: 25,
-    includeMetadata: true,
-    vector: embedding.data[0].embedding,
-  });
-
-  console.log("Query Results:", results);
-
+  // Prepare a string to hold any manufacturer details
   let resultString = '';
 
-  // Build an object mapping manufacturers to their details
-  const manufacturerCategories = {};
-  results.matches.forEach((match) => {
-    const manufacturer = match.metadata.manufacturer;
-    const location = match.metadata.location;
-    const category = match.metadata.category;
-    const subcategory = match.metadata.subcategory;
-    const subSubcategory = match.metadata["sub-subcategory"] || null;
-    const description = match.metadata.description;
+  // Initialize OpenAI client (needed for both embeddings and chat completions)
+  const openai = new OpenAI();
 
-    if (!manufacturerCategories[manufacturer]) {
-      manufacturerCategories[manufacturer] = {
-        location: location,
-        categories: new Set(),
-        details: new Set(),
-      };
-    }
-    manufacturerCategories[manufacturer].categories.add(category);
-    if (subSubcategory) {
-      manufacturerCategories[manufacturer].details.add(
-        `📌 **${subcategory} > ${subSubcategory}** – ${description}`
-      );
-    } else {
-      manufacturerCategories[manufacturer].details.add(
-        `📌 **${subcategory}** – ${description}`
-      );
-    }
-  });
+  // Define simple greetings that we consider non-manufacturer queries.
+  const simpleGreetings = new Set(['hello', 'hi', 'hey', 'greetings']);
+  const normalizedText = text.trim().toLowerCase();
 
-  // Build the result string using HTML <br /> for line breaks.
-  // This rewriting is applied for every user question (initial or follow-up).
-  for (const [manufacturer, info] of Object.entries(manufacturerCategories)) {
-    resultString += `✅ **Manufacturer:** ${manufacturer}<br />`;
-    resultString += `📍 **Location:** ${info.location}<br />`;
-    resultString += `📂 **Categories Offered:**<br />`;
-    info.categories.forEach((category) => {
-      resultString += `- ${category}<br />`;
+  // Only perform the embedding & Pinecone query if the query is not just a greeting.
+  if (!simpleGreetings.has(normalizedText)) {
+    // Initialize Pinecone client and specify the index & namespace.
+    const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
+    const index = pc.index('harvest-ai').namespace('ns1');
+
+    // Create an embedding for the user query.
+    const embedding = await openai.embeddings.create({
+      model: 'text-embedding-3-small',
+      input: text,
+      encoding_format: 'float',
     });
-    resultString += `🔍 **Product Details:**<br />`;
-    info.details.forEach((detail) => {
-      resultString += `${detail}<br />`;
+
+    // Query Pinecone for relevant manufacturers/products.
+    const results = await index.query({
+      topK: 25,
+      includeMetadata: true,
+      vector: embedding.data[0].embedding,
     });
-    resultString += `<br />`; // Separate manufacturer blocks
+
+    console.log("Query Results:", results);
+
+    // Set a minimum relevance threshold (adjust this value as needed).
+    const MIN_SCORE_THRESHOLD = 0.4;
+
+    // Only build manufacturer details if we have matches and the top score is high enough.
+    if (
+      results.matches &&
+      results.matches.length > 0 &&
+      results.matches[0].score >= MIN_SCORE_THRESHOLD
+    ) {
+      // Build an object mapping manufacturers to their details.
+      const manufacturerCategories = {};
+      results.matches.forEach((match) => {
+        const manufacturer = match.metadata.manufacturer;
+        const location = match.metadata.location;
+        const category = match.metadata.category;
+        const subcategory = match.metadata.subcategory;
+        const subSubcategory = match.metadata["sub-subcategory"] || null;
+        const description = match.metadata.description;
+
+        if (!manufacturerCategories[manufacturer]) {
+          manufacturerCategories[manufacturer] = {
+            location: location,
+            categories: new Set(),
+            details: new Set(),
+          };
+        }
+        manufacturerCategories[manufacturer].categories.add(category);
+        if (subSubcategory) {
+          manufacturerCategories[manufacturer].details.add(
+            `📌 **${subcategory} > ${subSubcategory}** – ${description}`
+          );
+        } else {
+          manufacturerCategories[manufacturer].details.add(
+            `📌 **${subcategory}** – ${description}`
+          );
+        }
+      });
+
+      // Build the result string using HTML <br /> for line breaks.
+      for (const [manufacturer, info] of Object.entries(manufacturerCategories)) {
+        resultString += `✅ **Manufacturer:** ${manufacturer}<br />`;
+        resultString += `📍 **Location:** ${info.location}<br />`;
+        resultString += `📂 **Categories Offered:**<br />`;
+        info.categories.forEach((category) => {
+          resultString += `- ${category}<br />`;
+        });
+        resultString += `🔍 **Product Details:**<br />`;
+        info.details.forEach((detail) => {
+          resultString += `${detail}<br />`;
+        });
+        resultString += `<br />`; // Separate manufacturer blocks.
+      }
+
+      // (Optional) Collapse multiple <br /> tags if needed.
+      resultString = resultString.replace(/(<br \/>[\s]*){2,}/g, "<br />");
+    }
   }
 
-  // (Optional) Collapse multiple <br /> tags if needed:
-  resultString = resultString.replace(/(<br \/>[\s]*){2,}/g, "<br />");
-
-  // Append the generated details to the current user message.
-  // This means every question (and follow-up) gets the rewritten details.
-  const lastMessage = data[data.length - 1];
-  const lastMessageContent = lastMessage.content + "<br />" + resultString;
+  // Append manufacturer details only if available.
+  const lastMessageContent = resultString ? text + "<br />" + resultString : text;
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1);
+
+  // Create the conversation messages array.
+  const conversationMessages = [
+    ...lastDataWithoutLastMessage,
+    { role: 'user', content: lastMessageContent },
+  ];
 
   // Create the completion using the combined conversation context.
   const completion = await openai.chat.completions.create({
     messages: [
       { role: 'system', content: systemPrompt },
-      ...lastDataWithoutLastMessage,
-      { role: 'user', content: lastMessageContent },
+      ...conversationMessages,
     ],
     model: 'gpt-4o-mini',
     stream: true,
