@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Box, Stack, TextField, Typography, IconButton, Avatar, Button } from '@mui/material';
 import { useState, useRef, useEffect } from 'react';
 import SendIcon from '@mui/icons-material/Send';
@@ -8,49 +7,67 @@ import PersonIcon from '@mui/icons-material/Person';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/navigation';
-import ReactMarkdown, { Components } from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import React from 'react';
+import { motion } from 'framer-motion';
 
-
-import { HTMLAttributes } from 'react';
-
-const MarkdownParagraph: React.FC<HTMLAttributes<HTMLParagraphElement>> = ({ children, ...props }) => (
-  <Typography
-    component="p"
-    variant="body2"
-    {...props} // Pass HTML props correctly
-    sx={{
-      fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
-      margin: 0,
-      padding: 0,
-      lineHeight: 1.4,
-    }}
-  >
-    {children}
-  </Typography>
+// -----------------------------
+// Floating Particles for 3D Background Effect
+// -----------------------------
+const FloatingParticles = () => (
+  <>
+    <motion.div
+      style={{
+        position: 'absolute',
+        top: '10%',
+        left: '5%',
+        width: 50,
+        height: 50,
+        background: 'rgba(255,255,255,0.3)',
+        borderRadius: '50%',
+        filter: 'blur(4px)',
+        zIndex: 0,
+      }}
+      animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
+      transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+    />
+    <motion.div
+      style={{
+        position: 'absolute',
+        bottom: '20%',
+        right: '10%',
+        width: 70,
+        height: 70,
+        background: 'rgba(255,255,255,0.2)',
+        borderRadius: '50%',
+        filter: 'blur(6px)',
+        zIndex: 0,
+      }}
+      animate={{ x: [0, -80, 0], y: [0, 40, 0] }}
+      transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+    />
+    <motion.div
+      style={{
+        position: 'absolute',
+        top: '40%',
+        left: '70%',
+        width: 40,
+        height: 40,
+        background: 'rgba(255,255,255,0.25)',
+        borderRadius: '50%',
+        filter: 'blur(3px)',
+        zIndex: 0,
+      }}
+      animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
+      transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+    />
+  </>
 );
 
-const MarkdownStrong: React.FC<HTMLAttributes<HTMLSpanElement>> = ({ children, ...props }) => (
-  <Typography component="span" variant="body2" sx={{ fontWeight: 'bold' }} {...props}>
-    {children}
-  </Typography>
-);
-
-
-
-const markdownComponents: Components = {
-  p: (props) => <MarkdownParagraph {...props} />, // ✅ Fix: Ensure proper prop passing
-  strong: (props) => <MarkdownStrong {...props} />,
-};
-
-
-
-/* -----------------------------
-   Outer Container & Header
-------------------------------*/
-
-
+// -----------------------------
+// Styled Components
+// -----------------------------
 const OuterContainer = styled(Box)(({ theme }) => ({
   width: '100vw',
   height: '100vh',
@@ -60,7 +77,6 @@ const OuterContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   perspective: '1200px',
 }));
-
 
 const Header = styled(Box)(({ theme }) => ({
   background: 'linear-gradient(135deg, #388E3C, #2E7D32)',
@@ -72,12 +88,6 @@ const Header = styled(Box)(({ theme }) => ({
   zIndex: 1,
   transform: 'translateZ(0)',
 }));
-
-
-/* -----------------------------
-   3D Message Bubbles
-------------------------------*/
-
 
 const AssistantMessageBubble = styled(Box)(({ theme }) => ({
   backgroundColor: '#FFFFFF',
@@ -108,7 +118,6 @@ const AssistantMessageBubble = styled(Box)(({ theme }) => ({
   },
 }));
 
-
 const UserMessageBubble = styled(Box)(({ theme }) => ({
   background: 'linear-gradient(135deg, #66BB6A, #43A047)',
   color: '#FFFFFF',
@@ -137,7 +146,6 @@ const UserMessageBubble = styled(Box)(({ theme }) => ({
   },
 }));
 
-
 const Timestamp = styled(Typography)(({ theme }) => ({
   fontSize: '12px',
   color: '#777777',
@@ -145,7 +153,6 @@ const Timestamp = styled(Typography)(({ theme }) => ({
   marginTop: '4px',
   fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
 }));
-
 
 const TypingIndicator = () => (
   <Box display="flex" justifyContent="center" alignItems="center" p={2}>
@@ -161,7 +168,6 @@ const TypingIndicator = () => (
   </Box>
 );
 
-
 const getCurrentTime = () => {
   const now = new Date();
   const hours = now.getHours().toString().padStart(2, '0');
@@ -169,43 +175,74 @@ const getCurrentTime = () => {
   return `${hours}:${minutes}`;
 };
 
+// -----------------------------
+// Framer Motion Variants
+// -----------------------------
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, when: 'beforeChildren' },
+  },
+};
 
-/* -----------------------------
-   Main Chat Component
-------------------------------*/
+const messageVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 300, damping: 30 },
+  },
+};
 
+const headerVariants = {
+  hidden: { y: -50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring', stiffness: 200, damping: 20 },
+  },
+};
 
+const buttonVariants = {
+  hover: { scale: 1.1, transition: { duration: 0.3 } },
+  tap: { scale: 0.95 },
+};
+
+// -----------------------------
+// Main Chat Component
+// -----------------------------
 export default function Home() {
   const router = useRouter();
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Hi! I'm Harvest AI. How can I help you explore manufacturers today? 😀`,
+      content: `Hi! I'm Harv. How can I help you explore manufacturers today? 😀`,
       timestamp: getCurrentTime(),
     },
   ]);
- 
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isAssistantTyping, setIsAssistantTyping] = useState(false);
 
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+
+  // Auto-scroll to the bottom on new messages
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   const sendMessage = async () => {
     if (!message.trim() || isLoading) return;
     setIsLoading(true);
 
-
     const newUserMessage = { role: 'user', content: message, timestamp: getCurrentTime() };
     const newAssistantMessage = { role: 'assistant', content: '. . .', timestamp: getCurrentTime() };
 
-
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      newUserMessage,
-      newAssistantMessage,
-    ]);
+    setMessages((prev) => [...prev, newUserMessage, newAssistantMessage]);
     setIsAssistantTyping(true);
-
 
     try {
       const response = await fetch('/api/chat', {
@@ -215,26 +252,19 @@ export default function Home() {
       });
       if (!response.ok) throw new Error('Network response was not ok');
 
-
       if (response.body) {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let updatedContent = '';
 
-
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
           updatedContent += decoder.decode(value, { stream: true });
-
-
-          setMessages((prevMessages) => {
-            const updatedMessages = [...prevMessages];
-            updatedMessages[updatedMessages.length - 1] = {
-              ...updatedMessages[updatedMessages.length - 1],
-              content: updatedContent,
-            };
-            return updatedMessages;
+          setMessages((prev) => {
+            const updated = [...prev];
+            updated[updated.length - 1] = { ...updated[updated.length - 1], content: updatedContent };
+            return updated;
           });
         }
       } else {
@@ -242,22 +272,16 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error:', error);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          role: 'assistant',
-          content: 'There was an error processing your request. 😕',
-          timestamp: getCurrentTime(),
-        },
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: 'There was an error processing your request. 😕', timestamp: getCurrentTime() },
       ]);
     }
-
 
     setIsAssistantTyping(false);
     setIsLoading(false);
     setMessage('');
   };
-
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Enter' && !event.shiftKey) {
@@ -266,22 +290,11 @@ export default function Home() {
     }
   };
 
-
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const scrollToBottom = () => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-
   return (
     <OuterContainer>
+      {/* Floating Particles Background */}
+      <FloatingParticles />
+
       <Stack
         direction="column"
         width="100%"
@@ -292,6 +305,8 @@ export default function Home() {
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
+          position: 'relative',
+          zIndex: 1,
         }}
       >
         {/* Header */}
@@ -304,10 +319,9 @@ export default function Home() {
               fontFamily: `"Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`,
             }}
           >
-            Harvest AI
+            Harv
           </Typography>
         </Header>
-
 
         {/* Messages Area */}
         <Stack
@@ -321,51 +335,50 @@ export default function Home() {
           }}
         >
           {messages.map((msg, index) => (
-            <Box
+            <motion.div
               key={index}
-              display="flex"
-              justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
-              mb={2}
+              initial={{ y: 0, scale: 1 }}
+              animate={{ y: [0, -3, 0], scale: [1, 1.02, 1] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <Stack direction="row" spacing={1} alignItems="flex-end">
-                {msg.role === 'assistant' ? (
-                  <>
-                    <Avatar sx={{ backgroundColor: '#66BB6A', width: 40, height: 40 }}>
-                      <AutoAwesomeIcon />
-                    </Avatar>
-                    <AssistantMessageBubble>
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={markdownComponents}
-                      >
-                        {msg.content}
-                      </ReactMarkdown>
-                      <Timestamp>{msg.timestamp}</Timestamp>
-                    </AssistantMessageBubble>
-                  </>
-                ) : (
-                  <>
-                    <UserMessageBubble>
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={markdownComponents}
-                      >
-                        {msg.content}
-                      </ReactMarkdown>
-                      <Timestamp>{msg.timestamp}</Timestamp>
-                    </UserMessageBubble>
-                    <Avatar sx={{ backgroundColor: '#388E3C', width: 40, height: 40 }}>
-                      <PersonIcon />
-                    </Avatar>
-                  </>
-                )}
-              </Stack>
-            </Box>
+              <Box
+                display="flex"
+                justifyContent={msg.role === 'assistant' ? 'flex-start' : 'flex-end'}
+                mb={2}
+              >
+                <Stack direction="row" spacing={1} alignItems="flex-end">
+                  {msg.role === 'assistant' ? (
+                    <>
+                      <Avatar sx={{ backgroundColor: '#66BB6A', width: 40, height: 40 }}>
+                        <AutoAwesomeIcon />
+                      </Avatar>
+                      <AssistantMessageBubble>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {msg.content}
+                        </ReactMarkdown>
+                        <Timestamp>{msg.timestamp}</Timestamp>
+                      </AssistantMessageBubble>
+                    </>
+                  ) : (
+                    <>
+                      <UserMessageBubble>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {msg.content}
+                        </ReactMarkdown>
+                        <Timestamp>{msg.timestamp}</Timestamp>
+                      </UserMessageBubble>
+                      <Avatar sx={{ backgroundColor: '#388E3C', width: 40, height: 40 }}>
+                        <PersonIcon />
+                      </Avatar>
+                    </>
+                  )}
+                </Stack>
+              </Box>
+            </motion.div>
           ))}
           {isAssistantTyping && <TypingIndicator />}
           <div ref={messagesEndRef} aria-live="polite" />
         </Stack>
-
 
         {/* Text Input and Send Button */}
         <Stack direction="row" spacing={2} sx={{ p: 2 }}>
@@ -411,33 +424,23 @@ export default function Home() {
         </Stack>
       </Stack>
 
-
-      <a
-  href="https://harvestmarketplace.netlify.app/" // Replace with your desired link
-  target="_blank" // Opens the link in a new tab
-  rel="noopener noreferrer" // Improves security for external links
-  style={{
-    position: 'absolute',
-    bottom: '105px', // Adjust the vertical position
-    right: '25px',
-    padding: '6px 12px',
-    fontSize: '0.875rem',
-    borderRadius: '8px',
-    backgroundColor: '#388E3C',
-    color: '#FFFFFF',
-    textDecoration: 'none',
-    display: 'inline-block',
-    textAlign: 'center',
-    lineHeight: '1.5',
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-    transition: 'background-color 0.2s ease',
-  }}
-  onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#2E7D32')} // Hover effect
-  onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#388E3C')} // Reset hover effect
->
-  Marketplace
-</a>
-
+      {/* Action Buttons */}
+      <Button
+        onClick={() => router.push('/addProfessor')}
+        variant="contained"
+        sx={{
+          position: 'absolute',
+          bottom: 16,
+          right: 16,
+          padding: '6px 12px',
+          fontSize: '0.875rem',
+          borderRadius: '8px',
+          backgroundColor: '#388E3C',
+          '&:hover': { backgroundColor: '#2E7D32' },
+        }}
+      >
+        Add Manufacturer
+      </Button>
       <Button
         onClick={() => router.push('/')}
         variant="contained"
@@ -457,4 +460,3 @@ export default function Home() {
     </OuterContainer>
   );
 }
-
